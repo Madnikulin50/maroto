@@ -31,7 +31,7 @@ func NewText(pdf gofpdf.Pdf, math Math, font Font) *text {
 func (s *text) Add(text string, textProp props.Text, marginTop float64, actualCol float64, qtdCols float64) {
 	actualWidthPerCol := s.math.GetWidthPerCol(qtdCols)
 
-	translator := s.pdf.UnicodeTranslatorFromDescriptor("")
+	translator := s.pdf.UnicodeTranslatorFromDescriptor("cp1251")
 	s.font.SetFont(textProp.Family, textProp.Style, textProp.Size)
 
 	textTranslated := translator(text)
