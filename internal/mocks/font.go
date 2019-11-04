@@ -2,7 +2,7 @@
 
 package mocks
 
-import "github.com/johnfercher/maroto/pkg/consts"
+import "github.com/madnikulin50/maroto/pkg/consts"
 
 import "github.com/stretchr/testify/mock"
 

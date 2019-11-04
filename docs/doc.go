@@ -27,11 +27,11 @@ Installation
 
 To install the package on your system, run
 
-    go get github.com/johnfercher/maroto
+    go get github.com/madnikulin50/maroto
 
 Later, to receive updates, run
 
-    go get -u -v github.com/johnfercher/maroto/...
+    go get -u -v github.com/madnikulin50/maroto/...
 
 
 Quick Start

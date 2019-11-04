@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/pdf"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/madnikulin50/maroto/pkg/consts"
+	"github.com/madnikulin50/maroto/pkg/pdf"
+	"github.com/madnikulin50/maroto/pkg/props"
 	"io/ioutil"
 	"os"
 )
@@ -38,13 +38,13 @@ func main() {
 			m.ColSpaces(2)
 
 			m.Col(func() {
-				m.QrCode("https://github.com/johnfercher/maroto", props.Rect{
+				m.QrCode("https://github.com/madnikulin50/maroto", props.Rect{
 					Percent: 75,
 				})
 			})
 
 			m.Col(func() {
-				id := "https://github.com/johnfercher/maroto"
+				id := "https://github.com/madnikulin50/maroto"
 				_ = m.Barcode(id, props.Barcode{
 					Proportion: props.Proportion{Width: 50, Height: 10},
 					Percent:    75,

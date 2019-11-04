@@ -22,4 +22,4 @@
 - [ ] Updated pkg/pdf/example_test.go <!-- If applied -->
 - [ ] Updated README.md <!-- If applied -->
 - [ ] New public methods has comments upside them explaining what it does <!-- If applied -->
-- [ ] Executed `go fmt github.com/johnfercher/maroto/...` to format all files
+- [ ] Executed `go fmt github.com/madnikulin50/maroto/...` to format all files

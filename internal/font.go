@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/johnfercher/maroto/pkg/consts"
 	"github.com/jung-kurt/gofpdf"
+	"github.com/madnikulin50/maroto/pkg/consts"
 )
 
 // Font is the abstraction which deals of how to set font configurations

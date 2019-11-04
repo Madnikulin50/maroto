@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/pdf"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/madnikulin50/maroto/pkg/consts"
+	"github.com/madnikulin50/maroto/pkg/pdf"
+	"github.com/madnikulin50/maroto/pkg/props"
 	"os"
 )
 
@@ -44,7 +44,7 @@ func main() {
 		})
 		m.ColSpace()
 		m.Col(func() {
-			m.QrCode("https://github.com/johnfercher/maroto", props.Rect{
+			m.QrCode("https://github.com/madnikulin50/maroto", props.Rect{
 				Percent: 75,
 			})
 		})
@@ -54,10 +54,10 @@ func main() {
 
 	m.Row(100, func() {
 		m.Col(func() {
-			_ = m.Barcode("https://github.com/johnfercher/maroto", props.Barcode{
+			_ = m.Barcode("https://github.com/madnikulin50/maroto", props.Barcode{
 				Percent: 70,
 			})
-			m.Text("https://github.com/johnfercher/maroto", props.Text{
+			m.Text("https://github.com/madnikulin50/maroto", props.Text{
 				Size:  20,
 				Align: consts.Center,
 				Top:   80,

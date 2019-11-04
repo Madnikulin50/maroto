@@ -1,9 +1,9 @@
 # Maroto 
 
-[![GoDoc](https://godoc.org/github.com/johnfercher/maroto?status.svg)](https://godoc.org/github.com/johnfercher/maroto)
-[![Travis](https://travis-ci.com/johnfercher/maroto.svg?branch=master)][travis] 
-[![Codecov](https://img.shields.io/codecov/c/github/johnfercher/maroto)](https://codecov.io/gh/johnfercher/maroto) 
-[![Go Report Card](https://goreportcard.com/badge/github.com/johnfercher/maroto)](https://goreportcard.com/report/github.com/johnfercher/maroto)
+[![GoDoc](https://godoc.org/github.com/madnikulin50/maroto?status.svg)](https://godoc.org/github.com/madnikulin50/maroto)
+[![Travis](https://travis-ci.com/madnikulin50/maroto.svg?branch=master)][travis] 
+[![Codecov](https://img.shields.io/codecov/c/github/madnikulin50/maroto)](https://codecov.io/gh/madnikulin50/maroto) 
+[![Go Report Card](https://goreportcard.com/badge/github.com/madnikulin50/maroto)](https://goreportcard.com/report/github.com/madnikulin50/maroto)
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go#template-engines)  
 
 A Maroto way to create PDFs. Maroto is inspired in Bootstrap and uses [Gofpdf](https://github.com/jung-kurt/gofpdf). Fast and simple.
@@ -19,7 +19,7 @@ always when a new page appear, in this case, a header may have many rows, lines 
 * With `go get`:
 
 ```bash
-go get -u github.com/johnfercher/maroto
+go get -u github.com/madnikulin50/maroto
 ```
 
 ## Features
@@ -27,35 +27,35 @@ go get -u github.com/johnfercher/maroto
 ![result](internal/assets/images/diagram.png)
 
 #### Grid System
-* [Row](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-Row)
-* [Col](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-Col)
-* [ColSpace](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-ColSpace)
-* [ColSpaces](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-ColSpaces)
+* [Row](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-Row)
+* [Col](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-Col)
+* [ColSpace](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-ColSpace)
+* [ColSpaces](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-ColSpaces)
 
 #### Components To Use Inside a Col
-* [Text w/ automatic new lines](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-Text)
-* [Signature](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-Signature)
-* Image ([From file](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-FileImage) or [Base64](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-Base64Image))
-* [QrCode](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#PdfMaroto.QrCode)
-* [Barcode](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#PdfMaroto.Barcode)   
+* [Text w/ automatic new lines](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-Text)
+* [Signature](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-Signature)
+* Image ([From file](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-FileImage) or [Base64](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-Base64Image))
+* [QrCode](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#PdfMaroto.QrCode)
+* [Barcode](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#PdfMaroto.Barcode)   
     
 #### Components To Use Outside a Row
-* [TableList](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-TableList)
-* [Line](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-Line)
+* [TableList](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-TableList)
+* [Line](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-Line)
     
 #### Components To Wrap Row, TableList and Line
-* [RegisterHeader](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#PdfMaroto.RegisterHeader)
-* [RegisterFooter](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#PdfMaroto.RegisterFooter)
+* [RegisterHeader](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#PdfMaroto.RegisterHeader)
+* [RegisterFooter](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#PdfMaroto.RegisterFooter)
 
 #### Others   
-* [Properties](https://godoc.org/github.com/johnfercher/maroto/pkg/props): most of the components has properties which you can use to customize appearance and behavior.
-* [SetBorder](https://godoc.org/github.com/johnfercher/maroto#PdfMaroto.SetDebugMode): Used to draw rectangles in every row and column
+* [Properties](https://godoc.org/github.com/madnikulin50/maroto/pkg/props): most of the components has properties which you can use to customize appearance and behavior.
+* [SetBorder](https://godoc.org/github.com/madnikulin50/maroto#PdfMaroto.SetDebugMode): Used to draw rectangles in every row and column
 * Automatic New Page: New pages are generated automatically when needed.
 * 100% Unicode
-* Save: You can [save on disk](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-OutputFileAndClose) or export to a [base64 string](https://godoc.org/github.com/johnfercher/maroto/pkg/pdf#example-PdfMaroto-Output)
+* Save: You can [save on disk](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-OutputFileAndClose) or export to a [base64 string](https://godoc.org/github.com/madnikulin50/maroto/pkg/pdf#example-PdfMaroto-Output)
 
 #### Roadmap
-* Updated in [Issues](https://github.com/johnfercher/maroto/issues)
+* Updated in [Issues](https://github.com/madnikulin50/maroto/issues)
 
 ## Examples
 In the [PDFs](internal/examples/pdfs) folder there are the PDFs generated
@@ -71,9 +71,9 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/pdf"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/madnikulin50/maroto/pkg/consts"
+	"github.com/madnikulin50/maroto/pkg/pdf"
+	"github.com/madnikulin50/maroto/pkg/props"
 	"io/ioutil"
 )
 
@@ -100,13 +100,13 @@ func main() {
 			m.ColSpaces(2)
 
 			m.Col(func() {
-				m.QrCode("https://github.com/johnfercher/maroto", props.Rect{
+				m.QrCode("https://github.com/madnikulin50/maroto", props.Rect{
 					Percent: 75,
 				})
 			})
 
 			m.Col(func() {
-				id := "https://github.com/johnfercher/maroto"
+				id := "https://github.com/madnikulin50/maroto"
 				_ = m.Barcode(id, props.Barcode{
 					Proportion: props.Proportion{50, 10},
 					Percent:    75,
@@ -231,9 +231,9 @@ func main() {
 
 * [Medium Article: Creating PDFs using Golang](https://medium.com/@johnathanfercher/creating-pdfs-using-golang-98b722e99d6d)
 
-[travis]: https://travis-ci.com/johnfercher/maroto
+[travis]: https://travis-ci.com/madnikulin50/maroto
 [test]: test.sh
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/johnfercher/maroto.svg)](https://starchart.cc/johnfercher/maroto)
+[![Stargazers over time](https://starchart.cc/madnikulin50/maroto.svg)](https://starchart.cc/madnikulin50/maroto)

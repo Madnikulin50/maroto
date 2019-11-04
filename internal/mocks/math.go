@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	props "github.com/johnfercher/maroto/pkg/props"
+	props "github.com/madnikulin50/maroto/pkg/props"
 	mock "github.com/stretchr/testify/mock"
 )
 

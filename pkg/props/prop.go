@@ -1,6 +1,6 @@
 package props
 
-import "github.com/johnfercher/maroto/pkg/consts"
+import "github.com/madnikulin50/maroto/pkg/consts"
 
 // Proportion represents a proportion from a rectangle, example: 16x9, 4x3...
 type Proportion struct {

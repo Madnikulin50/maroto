@@ -1,9 +1,9 @@
 package pdf_test
 
 import (
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/pdf"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/madnikulin50/maroto/pkg/consts"
+	"github.com/madnikulin50/maroto/pkg/pdf"
+	"github.com/madnikulin50/maroto/pkg/props"
 	"time"
 )
 
@@ -267,7 +267,7 @@ func ExamplePdfMaroto_QrCode() {
 
 	m.Row(rowHeight, func() {
 		m.Col(func() {
-			m.QrCode("https://godoc.org/github.com/johnfercher/maroto", props.Rect{
+			m.QrCode("https://godoc.org/github.com/madnikulin50/maroto", props.Rect{
 				Left:    5,
 				Top:     5,
 				Center:  false,
@@ -294,7 +294,7 @@ func ExamplePdfMaroto_Barcode() {
 	// Do a lot of things on rows and columns...
 
 	m.Col(func() {
-		_ = m.Barcode("https://github.com/johnfercher/maroto", props.Barcode{
+		_ = m.Barcode("https://github.com/madnikulin50/maroto", props.Barcode{
 			Percent:    75,
 			Proportion: props.Proportion{Width: 50, Height: 10},
 			Center:     true,
