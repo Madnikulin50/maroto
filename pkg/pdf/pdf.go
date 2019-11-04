@@ -42,6 +42,7 @@ type Maroto interface {
 	// File System
 	OutputFileAndClose(filePathName string) error
 	Output() (bytes.Buffer, error)
+	FPdf() gofpdf.Pdf
 }
 
 // PdfMaroto is the principal structure which implements Maroto abstraction
@@ -105,6 +106,10 @@ func NewMaroto(orientation consts.Orientation, pageSize consts.PageSize) Maroto 
 	maroto.Pdf.AddPage()
 
 	return maroto
+}
+
+func (s *PdfMaroto) FPdf() gofpdf.Pdf {
+	return s.Pdf
 }
 
 // RegisterHeader define a sequence of Rows, Lines ou TableLists
