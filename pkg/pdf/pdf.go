@@ -2,6 +2,7 @@ package pdf
 
 import (
 	"bytes"
+	"strings"
 
 	"github.com/jung-kurt/gofpdf"
 	"github.com/madnikulin50/maroto/internal"
@@ -349,7 +350,16 @@ func (s *PdfMaroto) Text(text string, prop ...props.Text) {
 
 	sumOfYOffsets := textProp.Top + s.offsetY
 
-	s.TextHelper.Add(text, textProp, sumOfYOffsets, s.rowColCount, float64(len(s.colsClosures)))
+	lines := strings.Split(text, "\n")
+	totalLines := 0
+	for _, line := range lines {
+		lines := s.TextHelper.Add(line, textProp, sumOfYOffsets, s.rowColCount, float64(len(s.colsClosures)))
+		sumOfYOffsets += float64(lines) * textProp.Size / 2.0
+		totalLines += lines
+	}
+	if totalLines > 1 {
+		s.offsetY += float64(totalLines-1) * textProp.Size / 2.0
+	}
 }
 
 // FileImage add an Image reading from disk inside a cell.

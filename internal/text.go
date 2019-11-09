@@ -9,7 +9,7 @@ import (
 
 // Text is the abstraction which deals of how to add text inside PDF
 type Text interface {
-	Add(text string, fontFamily props.Text, marginTop float64, actualCol float64, qtdCols float64)
+	Add(text string, fontFamily props.Text, marginTop float64, actualCol float64, qtdCols float64) (lines int)
 }
 
 type text struct {
@@ -28,7 +28,7 @@ func NewText(pdf gofpdf.Pdf, math Math, font Font) *text {
 }
 
 // Add a text inside a cell.
-func (s *text) Add(text string, textProp props.Text, marginTop float64, actualCol float64, qtdCols float64) {
+func (s *text) Add(text string, textProp props.Text, marginTop float64, actualCol float64, qtdCols float64) int {
 	actualWidthPerCol := s.math.GetWidthPerCol(qtdCols)
 
 	translator := s.pdf.UnicodeTranslatorFromDescriptor("cp1251")
@@ -40,6 +40,7 @@ func (s *text) Add(text string, textProp props.Text, marginTop float64, actualCo
 
 	if stringWidth < actualWidthPerCol || textProp.Extrapolate || len(words) == 1 {
 		s.addLine(textProp, actualCol, actualWidthPerCol, marginTop, stringWidth, textTranslated)
+		return 1
 	} else {
 		currentlySize := 0.0
 		actualLine := 0
@@ -62,6 +63,7 @@ func (s *text) Add(text string, textProp props.Text, marginTop float64, actualCo
 			lineWidth := s.pdf.GetStringWidth(line)
 			s.addLine(textProp, actualCol, actualWidthPerCol, marginTop+float64(index)*textProp.Size/2.0, lineWidth, line)
 		}
+		return len(lines)
 	}
 }
 
